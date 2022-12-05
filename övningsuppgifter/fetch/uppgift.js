@@ -43,7 +43,5 @@ async function getImg(file) {
 
   img.src = URL.createObjectURL(blob);
   // document.body.append(img);  // add new tag
-  img.appendChild(); // add to "old" tag
+  img.append(); // add to "old" tag
 }
-
-///////////// uppgift 4 ////////////////

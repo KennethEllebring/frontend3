@@ -1,0 +1,68 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+body div.wrapper {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body div.wrapper ul.card {
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  list-style: none;
+  border: 2px solid rgba(0, 0, 0, 0);
+  transition-duration: 1s;
+}
+body div.wrapper ul.card:hover {
+  transition: 1s;
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px gray;
+}
+body div.wrapper ul.card li.picture {
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 300px;
+  height: 300px;
+}
+body div.wrapper ul.card li.picture img.productPic {
+  max-width: 265px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: 265px;
+}
+body div.wrapper ul.card li.name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 900;
+  font-style: italic;
+  max-width: 300px;
+  overflow-x: hidden;
+}
+body div.wrapper ul.card li.product {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 900;
+}
+body div.wrapper ul.card li.description {
+  text-align: justify;
+  width: 300px;
+}
+body div.wrapper ul.card li.price {
+  margin-bottom: 2rem;
+  margin-top: auto;
+  font-size: 2rem;
+  font-weight: 900;
+}/*# sourceMappingURL=index.css.map */
