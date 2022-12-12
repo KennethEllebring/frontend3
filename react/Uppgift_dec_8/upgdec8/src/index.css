@@ -1,0 +1,189 @@
+body {
+  margin: 0;
+  background-color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+/* wrappers */
+div.App {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+div.wrap-all {
+  background-color: #ffe2e7;
+  display: flex;
+}
+
+div.wrap-side {
+  background-color: #ffe2e7;
+  margin: 1rem;
+  width: 20vw;
+}
+
+/* card content */
+div.content-wrapper {
+  background-color: white;
+  width: 66vw;
+  margin: 1rem;
+}
+div.content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 1rem;
+}
+div.header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+div span.bold {
+  font-weight: 700;
+}
+
+div.card-content {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+div img.big-img {
+  border: 1px solid black;
+  width: 60vw;
+}
+div.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}
+button.like {
+  background-color: whitesmoke;
+  width: 100px;
+  padding: 1rem;
+  border: px solid black;
+}
+button.replies {
+  background-color: black;
+  color: white;
+  width: 110px;
+  padding: 1rem;
+  border: px solid black;
+}
+span.button-counter {
+  background-color: white;
+  color: black;
+  padding: 5px;
+}
+
+/* profile */
+
+div.profile {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+h2.profile-header {
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  margin-bottom: 0px;
+}
+p.profile-info {
+  font-size: 0.8rem;
+  margin: 1rem;
+  margin-top: 0px;
+}
+
+/* popular posts */
+div.popular-posts {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  text-align: left;
+  color: white;
+  background-color: black;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+div.post-preview {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+  border-top: 1px dotted black;
+}
+img.thumbnail {
+  display: flex;
+  margin-right: 0.5rem;
+  height: 3rem;
+  width: 3rem;
+
+  border: 1px solid black;
+}
+div p.header {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 700;
+}
+
+p.info {
+  margin-top: 0px;
+}
+
+/* advertise */
+div.advertise {
+  background-color: white;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+p.adds {
+  background-color: #ffe2e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(0, -10%);
+  margin: 1rem;
+  margin-top: 2rem;
+  height: 200px;
+}
+
+/* tags */
+
+div.tags {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+div.all-tags {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+span.tag {
+  background-color: #ffe2e7;
+  font-size: 0.7rem;
+  padding: 0.2rem;
+  margin: 0.5rem;
+  margin-right: 0rem;
+}
+span.tag:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}

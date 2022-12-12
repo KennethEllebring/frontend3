@@ -1,0 +1,28 @@
+body {
+  & .wrapper {
+    width: 40vw;
+    height: 10rem;
+    background-color: #c8d8e4;
+    position: relative;
+    border: black 4px solid;
+    & .background {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: bolder;
+      & .clock {
+        font-size: 5rem;
+        color: rgb(16, 4, 4);
+        text-shadow: 2px 2px 2px grey;
+      }
+      & .date {
+        display: block;
+        opacity: 0;
+        font-size: 2rem;
+        text-shadow: 2px 2px 2px grey;
+        background-color: whitesmoke;
+      }
+    }
+  }
+}

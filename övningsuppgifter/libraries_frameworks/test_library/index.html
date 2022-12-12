@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./lib/moment/moment.min.js"></script>
+    <link rel="stylesheet" href="./scss/styles.css" />
+  </head>
+  <body>
+    <center>
+      <h1>MomentJS</h1>
+
+      <div class="wrapper">
+        <div class="background">
+          <div class="clock"></div>
+          <span>************ Hover Here *************</span>
+          <span class="date" onmouseover="hej(this)" onmouseout="baj(this)"></span>
+          <span>************************************</span>
+        </div>
+      </div>
+    </center>
+
+    <script>
+      // tid datum och gmt
+
+      const intervalId = setInterval(function () {
+        let time = moment().format("h:mm:ss");
+        const clock = document.querySelector(".clock");
+        clock.innerHTML = time;
+      }, 1000);
+
+      let date = moment().format("YYYY / MM / DD Z");
+
+      const dateDisplay = document.querySelector(".date");
+      dateDisplay.innerHTML = date;
+
+      function hej(x) {
+        x.style.opacity = "1";
+      }
+      function baj(x) {
+        x.style.opacity = "0";
+      }
+    </script>
+  </body>
+</html>
