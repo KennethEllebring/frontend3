@@ -1,0 +1,75 @@
+/* imports */
+@font-face {
+  font-family: WOW-plexus;
+  src: url("../assets/fonts/WoW-plexus.ttf");
+}
+
+/* Body */
+body {
+  color: gold;
+  background: url(../assets/media/background.png);
+  background-color: rgb(50, 25, 5);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px 50px;
+}
+
+/* Header Navbar */
+header.header-wrapper {
+  display: grid;
+  grid-template-columns: auto;
+  width: 100vw;
+  background-color: rgb(50, 25, 5);
+  justify-content: center;
+  gap: 2rem;
+  border-bottom: gold 2px solid;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+}
+
+h1.header {
+  display: grid;
+  grid-area: 1 / 3;
+  margin: 2rem;
+  font-family: WOW-plexus;
+  color: Gold;
+}
+
+header a {
+  margin: auto;
+  width: 10rem;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 900;
+  color: Gold;
+  border-right: rgb(80, 40, 8) solid 2px;
+  border-left: rgb(80, 40, 8) solid 2px;
+  border-bottom: rgb(0, 0, 0, 0) solid 2px;
+}
+
+header a:hover {
+  color: #fff;
+}
+
+.link1 {
+  grid-area: 1 / 1;
+}
+.link2 {
+  grid-area: 1 / 2;
+}
+.link3 {
+  grid-area: 1 / 4;
+}
+.link4 {
+  grid-area: 1 / 5;
+}
+
+/* Home */
+div.home-header {
+  text-align: center;
+}
+/* Profiles */
+
+/* Search */
+
+/* Contact */

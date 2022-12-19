@@ -9,7 +9,7 @@ function App() {
   return (
     ////////// Different Routes depending on how many "sites" that is added to project///////////
     <Router>
-      <div className="App"> 
+      <div className="App">
         <Navbar />
 
         <div className="content">

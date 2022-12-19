@@ -1,40 +1,76 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-ul {
-  list-style-type: none;
-}
-/* @media (prefers-reduced-motion: no-preference) {
-  .buttons {
-    animation: App-logo-spin infinite 20s linear;
-  } 
-}*/
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+div .wrapper {
+  display: grid;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 5rem;
+}
+div.border {
+  border: 4px grey groove;
+}
+div .display {
+  padding-right: 0.5rem;
+  text-align: right;
+  border: 20px grey solid;
 }
 
-.App-link {
-  color: #61dafb;
+div .button-wrapper {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  height: 4rem;
+  width: 4rem;
+}
+
+.button1 {
+  grid-area: 3 / 1 / 3 / 1;
+}
+.button2 {
+  grid-area: 3 / 2 / 3 / 2;
+}
+.button3 {
+  grid-area: 3 / 3 / 3 / 3;
+}
+.button4 {
+  grid-area: 2 / 1 / 2 / 1;
+}
+.button5 {
+  grid-area: 2 / 2 / 2 / 2;
+}
+.button6 {
+  grid-area: 2 / 3 / 2 / 3;
+}
+.button7 {
+  grid-area: 1 / 1 / 1 / 1;
+}
+.button8 {
+  grid-area: 1 / 2 / 1 / 2;
+}
+.button9 {
+  grid-area: 1 / 3 / 1 / 3;
+}
+.button0 {
+  grid-area: 4 / 2 / 4 / 2;
+}
+.button10 {
+  grid-area: 4 / 3 / 4 / 3;
+}
+.button11 {
+  grid-area: 4 / 4 / 4 / 4;
+}
+.button12 {
+  grid-area: 3 / 4 / 3 / 4;
+}
+.button13 {
+  grid-area: 2 / 4 / 2 / 4;
+}
+.button14 {
+  grid-area: 1 / 4 / 1 / 4;
+}
+.button15 {
+  width: 100%;
+  grid-area: 5 / 1 / 5 / 5;
+}
+.button16 {
+  grid-area: 4 / 1 / 4 / 1;
 }

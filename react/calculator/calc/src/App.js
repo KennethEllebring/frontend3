@@ -1,14 +1,10 @@
-import {useState} from "react";
 import "./App.css";
-import Buttons from "./components/Buttons";
-
-const colors = ["red", "blue", "yellow", "green", "salmon"];
+import Calculator from "./components/Calculator.js";
 
 function App() {
-  const [currentColor, setCurrentColor] = useState(colors[0]);
   return (
     <div className="App">
-      <Buttons />
+      <Calculator />
     </div>
   );
 }
