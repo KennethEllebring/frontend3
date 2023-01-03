@@ -1,0 +1,547 @@
+////////// fonts ///////////
+@font-face {
+  font-family: "Auto Techno";
+  src: url(./assets/fonts/auto-techno.ttf);
+}
+
+//////// variables /////////
+
+$background: #000;
+$textcolor: #fff;
+$objects: #000;
+$links: #fff;
+
+* {
+  margin: 0;
+}
+
+body {
+  margin: 1rem;
+  background-color: var(--background);
+  color: var(--textcolor);
+
+  /* ---------------- Navbar and burger menu ------------------ */
+
+  nav {
+    padding-bottom: 1rem;
+    background-color: var(--background);
+    display: flex;
+    justify-content: space-between;
+    border-bottom: var(--textcolor) dotted 1px;
+    a:link {
+      text-decoration: none;
+      color: var(--textcolor);
+    }
+    a:visited {
+      text-decoration: none;
+      color: var(--textcolor);
+    }
+    a:active {
+      color: var(--textcolor);
+    }
+    h1.logo {
+      font-family: "Auto Techno";
+      font-weight: 100;
+      font-size: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      text-shadow: 3px 3px 3px grey;
+      &:hover {
+        text-shadow: 0px 0px 0px;
+      }
+    }
+    p.flavor-text {
+      margin-top: -0.8rem;
+      font-size: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  .darklightswitch {
+    position: absolute;
+    top: 1.5rem;
+    right: 4rem;
+    font-size: 1rem;
+    background-color: var(--background);
+    color: var(--textcolor);
+    border: 0px;
+    text-align: center;
+    text-shadow: var(--textcolor) 0px 0px 5px, var(--textcolor) 0px 0px 10px, var(--textcolor) 0px 0px 15px, var(--textcolor) 0px 0px 20px, var(--textcolor) 0px 0px 25px, var(--textcolor) 0px 0px 30px, var(--textcolor) 0px 0px 35px, var(--textcolor) 0px 0px 40px;
+    &:hover {
+      cursor: pointer;
+      transition: ease-in 1s;
+      text-shadow: var(--textcolor) 0px 0px 0px;
+    }
+  }
+  .burger-menu {
+    margin-top: 1rem;
+    margin-right: 1rem;
+    height: 100%;
+    width: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+  }
+  .burger-bar {
+    width: 4em;
+    height: 0.5em;
+    background-color: var(--objects);
+    border-radius: 0.5em;
+  }
+  .menu {
+    width: 20rem;
+    position: absolute;
+    top: 7rem;
+    right: 0;
+    z-index: 10;
+    ul.links {
+      margin-top: 1rem;
+      margin-right: 2rem;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      a:link {
+        color: var(--textcolor);
+        text-decoration: none;
+        font-size: 2rem;
+        border-bottom: darkblue 2px solid;
+        border-radius: 12px;
+      }
+      a:visited {
+        color: var(--textcolor);
+        text-decoration: none;
+      }
+      a:hover {
+        color: var(--links);
+      }
+      a:active {
+        color: var(--links);
+      }
+      li {
+        height: 3rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+          background-color: var(--objects);
+          color: var(--links);
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+  .hidden {
+    display: none;
+  }
+  .visible {
+    display: inherit;
+  }
+  .burger-bar.clicked {
+    &:nth-child(1) {
+      transform: rotate(45deg) translate(0.75em, 1.25em);
+      transition: ease-out 0.5s;
+    }
+    &:nth-child(2) {
+      transform: scale(0.1);
+      transition: ease-out 0.5s;
+    }
+    &:nth-child(3) {
+      transform: rotate(135deg) translate(-0.5em, 1em);
+      transition: ease-out 0.5s;
+    }
+  }
+  .burger-bar.unclicked {
+    transform: rotate(0) translate(0);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+  }
+}
+
+/* ---------------- Home ui ------------------ */
+
+div.home-wrapper {
+  display: flex;
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  ul {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    width: 90vw;
+    height: 70vh;
+    list-style: none;
+    li.home1 {
+      a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      height: 70vh;
+      min-width: 28vw;
+      div.background1 {
+        min-width: 400px;
+        display: flex;
+        height: 100%;
+        background-image: url(./assets/pictures/me.jpg);
+        background-size: cover;
+        background-position: center;
+        border-radius: 5%;
+        align-items: flex-start;
+        justify-content: center;
+        opacity: 0.5;
+        &:hover {
+          opacity: 1;
+          scale: 1.02;
+          transition: ease 1s;
+          cursor: pointer;
+        }
+        p.about {
+          font-family: "Auto Techno";
+          display: flex;
+          font-size: 2rem;
+          opacity: 1;
+        }
+      }
+    }
+    li.home2 {
+      a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      height: 70vh;
+      min-width: 28vw;
+      div.background2 {
+        min-width: 400px;
+        display: flex;
+        height: 100%;
+        background-image: url(./assets/pictures/projects.jpg);
+        background-size: cover;
+        background-position: center;
+        border-radius: 5%;
+        align-items: flex-start;
+        justify-content: center;
+        opacity: 0.5;
+        &:hover {
+          opacity: 1;
+          scale: 1.02;
+          transition: ease 1s;
+          cursor: pointer;
+        }
+        p.projects {
+          font-family: "Auto Techno";
+          display: flex;
+          font-size: 2rem;
+          opacity: 1;
+        }
+      }
+    }
+    li.home3 {
+      a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      height: 70vh;
+      min-width: 28vw;
+      div.background3 {
+        min-width: 400px;
+        display: flex;
+        height: 100%;
+        background-image: url(./assets/pictures/contact.jpg);
+        background-size: cover;
+        background-position: center;
+        border-radius: 5%;
+        align-items: flex-start;
+        justify-content: center;
+        opacity: 0.5;
+        &:hover {
+          opacity: 1;
+          scale: 1.02;
+          transition: ease 1s;
+          cursor: pointer;
+        }
+        p.blog {
+          font-family: "Auto Techno";
+          display: flex;
+          font-size: 2rem;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+div.footer-wrapper {
+  div.line {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-top: 1px dotted var(--textcolor);
+  }
+  div.info-wrapper {
+    display: flex;
+    justify-content: space-between;
+    p.date {
+      margin-left: 1rem;
+    }
+    a.footerlink {
+      text-decoration: none;
+      padding: 0.5rem;
+      color: var(--background);
+      background-color: var(--textcolor);
+      font-size: 1rem;
+      margin-right: 4rem;
+      border-radius: 10px;
+    }
+  }
+}
+
+/* ---------------- About -----------------*/
+section.about-wrapper {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2.abouttitle {
+    margin-bottom: 1rem;
+    width: 60vw;
+  }
+  p.aboutcontent {
+    width: 60vw;
+  }
+}
+/* ---------------- Projects -----------------*/
+div.projectwrapper {
+  display: flex;
+  height: 20vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1.projectbanner {
+    font-family: "Auto Techno";
+    font-weight: 100;
+    display: flex;
+  }
+}
+
+/* ---------------- Blog ui ------------------ */
+div.noMatch-wrap {
+  p.noMatch {
+    position: absolute;
+    top: 20rem;
+    left: 40vw;
+    font-size: 3rem;
+  }
+}
+div.blog-wrapper {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  // width: 90;
+
+  a {
+    width: 30rem;
+    height: 6rem;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--textcolor);
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    article.blog {
+      padding: 1rem;
+      h2.blogTitle {
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
+      p.blogAuthor {
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
+      em.blogDate {
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
+      p.blogBody {
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
+    }
+    :hover {
+      background-color: var(--textcolor);
+      color: var(--links);
+    }
+  }
+}
+/* ---------------- SearchBar -----------------*/
+div.search-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  justify-content: center;
+  form {
+    #outlined-size-small {
+      color: var(--textcolor);
+      border-bottom: 1px solid var(--textcolor);
+      border-radius: 5px;
+    }
+    #outlined-size-small-label {
+      color: var(--textcolor);
+    }
+    p.or {
+      text-align: center;
+    }
+  }
+}
+
+/* ---------------- NewBlogPost -----------------*/
+div.create-wrapper {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  h2.addblog {
+    display: flex;
+  }
+  form.create-form {
+    margin-top: 1rem;
+    gap: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 30vw;
+    input.blogtitle {
+      max-width: 30vw;
+    }
+    textarea.blogbody {
+      height: 6vw;
+      max-width: 30vw;
+    }
+    select.blogauthor {
+      max-width: 30vw;
+    }
+    button {
+      margin-top: 1rem;
+      height: 2rem;
+      max-width: 30vw;
+      border-radius: 10px;
+      color: var(--textcolor);
+      background-color: var(--background);
+      border: 1px solid var(--textcolor);
+      &:hover {
+        color: var(--background);
+        background-color: var(--textcolor);
+        cursor: pointer;
+      }
+    }
+    div.create-preview {
+      margin-top: 1rem;
+      max-width: 30vw;
+      p.bodypreview {
+        overflow-wrap: break-word;
+        max-width: 30vw;
+      }
+    }
+  }
+}
+
+/* ---------------- BlogDetails -----------------*/
+div.blogdetails-wrapper {
+  overflow-wrap: break-word;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  article.blogdetails {
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 50vw;
+    justify-content: center;
+
+    h2.blogtitle {
+    }
+    p.blogauthor {
+    }
+    div.blogbody {
+    }
+    button.blogbutton {
+      margin-top: 1rem;
+      height: 2rem;
+      min-width: 10rem;
+      width: 10rem;
+      border-radius: 10px;
+      color: var(--textcolor);
+      background-color: var(--background);
+      border: 1px solid var(--textcolor);
+      &:hover {
+        color: var(--background);
+        background-color: var(--textcolor);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/* ---------------- Contact -----------------*/
+
+section.contact-wrapper {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+
+  h2.contact-title {
+    font-family: "Auto Techno";
+    font-weight: 100;
+    text-align: center;
+  }
+  div.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p.small-header {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+    a.contact-link {
+      padding: 1rem;
+      text-decoration: none;
+      color: var(--textcolor);
+      border-radius: 10px;
+      &:hover {
+        color: var(--background);
+        background-color: var(--textcolor);
+      }
+    }
+  }
+}
+
+/* ---------------- Media querys -----------------*/
+
+@media only screen and (max-width: 1405px) {
+  div.line {
+    display: none;
+  }
+  p.date {
+    display: none;
+  }
+  a.footerlink {
+    display: none;
+  }
+}
+@media only screen and (max-width: 585px) {
+  button.darklightswitch {
+    display: none;
+  }
+}

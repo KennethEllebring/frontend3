@@ -1,24 +1,34 @@
-import HeaderNav from "./components/HeaderNav";
+import {Routes, Route, BrowserRouter, Link} from "react-router-dom";
 import Home from "./components/Home";
-import Profiles from "./components/Profiles";
-import Search from "./components/Search";
+import Navbar from "./components/Navbar";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import AllBlogs from "./components/Allblogs";
+import Blogdetails from "./components/Blogdetails";
+import Newblog from "./components/Newblog";
 import Contact from "./components/Contact";
-import NotFound from "./components/NotFound";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import "./styles/App.css";
+import NotFound from "./components/Notfound";
+import DarkLightTheme from "./components/darklighttheme";
+import "./app.scss";
 
 function App() {
   return (
-    ////////// Different Routes depending on how many "sites" that is added to project///////////
     <BrowserRouter>
-      <div className="App">
-        <HeaderNav />
-      </div>
+      <header className="App">
+        <Navbar />
+        <div className="darklightswitch">
+          <DarkLightTheme />
+        </div>
+      </header>
+
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/Profiles" element={<Profiles />} />
-        <Route path="/Search" element={<Search />} />
-        <Route path="/Contact" element={<Contact />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/allblogs" element={<AllBlogs />} />
+        <Route path="/blogs/:id" element={<Blogdetails />} />
+        <Route path="/newblog" element={<Newblog />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
